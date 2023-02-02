@@ -1,0 +1,14 @@
+.likeIcon {
+    width: 16px;
+    height: auto;
+}
+.shareIcon {
+    width: 14px;
+    height: auto;
+}
+.likeIconWrap {
+    padding: 5px 7px !important;
+}
+.shareIconWrap {
+    padding: 5px 8px !important;
+}

@@ -1,0 +1,83 @@
+.sprite {
+    background-image: url(../public/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-apartment-icon {
+    width: 90px;
+    height: 90px;
+    background-position: -5px -5px;
+}
+
+.sprite-bed-icon {
+    width: 93px;
+    height: 90px;
+    background-position: -5px -105px;
+}
+
+.sprite-copy-icon {
+    width: 93px;
+    height: 91px;
+    background-position: -5px -205px;
+}
+
+.sprite-heart-icon {
+    width: 93px;
+    height: 98px;
+    background-position: -5px -306px;
+}
+
+.sprite-land-plot-icon {
+    width: 93px;
+    height: 94px;
+    background-position: -5px -414px;
+}
+
+.sprite-location-icon {
+    width: 60px;
+    height: 91px;
+    background-position: -5px -518px;
+}
+
+.sprite-offplan-property-icon {
+    width: 100px;
+    height: 97px;
+    background-position: -5px -619px;
+}
+
+.sprite-penthouse-icon {
+    width: 98px;
+    height: 94px;
+    background-position: -5px -726px;
+}
+
+.sprite-search-icon {
+    width: 93px;
+    height: 97px;
+    background-position: -5px -830px;
+}
+
+.sprite-share-icon {
+    width: 70px;
+    height: 90px;
+    background-position: -5px -937px;
+}
+
+.sprite-townhouse-icon {
+    width: 90px;
+    height: 90px;
+    background-position: -5px -1037px;
+}
+
+.sprite-villa-icon {
+    width: 91px;
+    height: 45px;
+    background-position: -5px -1137px;
+}
+
+.sprite-washroom-icon {
+    width: 93px;
+    height: 91px;
+    background-position: -5px -1192px;
+}
