@@ -15,15 +15,15 @@ export default function VisionHome() {
                 <div className="flex py-10 flex-wrap">
                     <div className="basis-1/3 max-md:basis-full p-4 md:pr-10">
                         <h3>Our Mission</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <p>Our mission is to be recognized as the  market leader in the UAE with our highly qualified team and to expand our business regionally and globally  through unrivaled success and reputation.</p>
                     </div>
                     <div className="basis-1/3 max-md:basis-full p-4 md:px-10 border-x border-[#03a6a6]">
                         <h3>Our Vision</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <p>Our vision is to contribute to the future of Dubai Real Estate by establishing new market realities using unique innovative approach to achieve the best interests of our customers and stakeholders.</p>
                     </div>
                     <div className="basis-1/3 max-md:basis-full p-4 md:pl-10">
                         <h3>Our Values</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <p>In an industry involving high value  transactions, we pride ourselves on our transparency, fairness and integrity to gain the trust of our stakeholders.</p>
                     </div>
                 </div>
             </div>
