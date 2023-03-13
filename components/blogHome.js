@@ -1,5 +1,7 @@
 import Image from "next/image";
-import placeholderPic from '../public/placeholder.png';
+import blogThumbONe from '../public/blog-media/blog-thumb-1.png';
+import blogThumbTwo from '../public/blog-media/blog-thumb-2.png';
+import blogThumbThree from '../public/blog-media/blog-thumb-3.png';
 
 export default function BlogHome() {
     return(
@@ -7,7 +9,7 @@ export default function BlogHome() {
             <h2 className="mb-10 text-center">Latest Blogs & News</h2>
             <div className="flex justify-between flex-wrap space-y-7 lg:flex-nowrap">
                 <div className="border max-w-[275px] rounded-xl mx-auto mt-7">
-                    <Image src={placeholderPic} alt="slider image" className="rounded-t-xl" />
+                    <Image src={blogThumbONe} alt="slider image" className="rounded-t-xl w-full" />
                     <div className="py-2 px-3">
                         <h3 className="text-lg mb-0">Lorem Ipsum</h3>
                         <div className="text-sm">08 October 2022</div>
@@ -16,7 +18,7 @@ export default function BlogHome() {
                     </div>
                 </div>
                 <div className="border max-w-[275px] rounded-xl mx-auto">
-                    <Image src={placeholderPic} alt="slider image" className="rounded-t-xl" />
+                    <Image src={blogThumbTwo} alt="slider image" className="rounded-t-xl w-full" />
                     <div className="py-2 px-3">
                         <h3 className="text-lg mb-0">Lorem Ipsum</h3>
                         <div className="text-sm">08 October 2022</div>
@@ -25,7 +27,7 @@ export default function BlogHome() {
                     </div>
                 </div>
                 <div className="border max-w-[275px] rounded-xl mx-auto">
-                    <Image src={placeholderPic} alt="slider image" className="rounded-t-xl" />
+                    <Image src={blogThumbThree} alt="slider image" className="rounded-t-xl w-full" />
                     <div className="py-2 px-3">
                         <h3 className="text-lg mb-0">Lorem Ipsum</h3>
                         <div className="text-sm">08 October 2022</div>

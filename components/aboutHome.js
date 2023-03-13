@@ -12,7 +12,8 @@ export default function AboutHome() {
                 <h2 className="font-bold text-[#03a6a6] text-lg mb-3">About us</h2>
                 <h3 className="font-semibold mb-3">Top Locations</h3>
                 <h3 className="font-light">in Dubai</h3>
-                <p className="mb-10 font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <p className="mb-5 font-light">Marea Capital Properties is a brand new platform for all your real estate needs successfully implementing new technologies and      knowledge to adapt seamlessly to the evolving market demands and provide the most innovative solutions to it’s customers.</p>
+                <p className="mb-10 font-light" >We’re here to help make your real estate dreams a reality.</p>
                 <Link href="/" className="btn-primary">
                     Learn More
                 </Link>
