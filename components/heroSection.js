@@ -7,7 +7,7 @@ export default function HeroSection() {
                 <div className={herostyles.herolhs}>
                     <div className="pl-8">
                         <h2 className='text-4xl mb-4'>
-                            We Complete
+                            We Completes
                         </h2>
                         <h2 className="font-bold text-5xl mb-7 mareacolor">
                             Your Dreams
