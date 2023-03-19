@@ -8,11 +8,25 @@ import Testimonials from '../components/testimonialsHome';
 import LogosTags from '../components/logosTags';
 import HeroAreas from '../components/areas/HeroAreas';
 import AreaCards from '../components/areas/areaCards';
+import Link from 'next/link';
+import DeveloperCard from '@/components/developers/developerCard';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Areas() {
+export async function getStaticProps() {
+  const URL = 'http://localhost:3000/developers/get-all'
+  const res = await fetch(URL)
+  const data = await res.json()
+
+  return {
+      props: {
+          developers: data
+      }
+  }
+}
+
+export default function Areas({developers}) {
   return (
     <>
       <Head>
@@ -25,7 +39,32 @@ export default function Areas() {
           <>
             <Header />
             <HeroAreas />
-            <AreaCards />
+            <div className="content-wrap px-4">
+              <div className="flex justify-between w-full my-10 py-10 max-sm:flex-wrap max-sm:space-y-10">
+                  <div>
+                      Show price in <span className=" bg-gray-200 px-1 text-sm">USD</span> <span className=" bg-gray-200 px-1 text-sm">AED</span> <span className=" bg-gray-200 px-1 text-sm">GBP</span>
+                  </div>
+                  <div>
+                      Sort By:
+                      <select name="sortbyfilter">
+                          <option value="option1">Default Order</option>
+                          <option value="option2">Alphbetically</option>
+                          <option value="option3">By Price</option>
+                          <option value="option4">High to Low</option>
+                      </select>
+                  </div>
+              </div>
+            
+            <div className="flex flex-wrap justify-between space-y-10">
+            {developers.map(developer => (
+                <Link key={developer._id}  href={`/developer/${developer._id}`} className="bg-[#ededed] text-center rounded-b-xl relative basis-1/3 md:max-w-[32%] mt-10">
+                <DeveloperCard 
+                    name={developer.developerName} 
+                />
+                </Link>
+            ))}
+            </div>
+            </div>
             <LogosTags />
             <BlogHome />
             <Testimonials />

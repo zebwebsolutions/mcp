@@ -1,7 +1,21 @@
 import Image from "next/image";
 import placeholderPic from '../../public/placeholder.png';
+import DeveloperCard from "../developers/developerCard";
 
-export default function AreaCards() {
+export async function getStaticProps() {
+    const URL = 'http://localhost:3000/developers/get-all'
+    const res = await fetch(URL)
+    const data = await res.json()
+
+    return {
+        props: {
+            developers: data
+        }
+    }
+}
+
+
+export default function AreaCards({developers}) {
     return(
         <div className="content-wrap px-4">
             <div className="flex justify-between w-full my-10 py-10 max-sm:flex-wrap max-sm:space-y-10">
@@ -19,51 +33,6 @@ export default function AreaCards() {
                 </div>
             </div>
             <div className="flex flex-wrap justify-between space-y-10">
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%] mt-10">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
-                <div className="bg-[#ededed] text-center rounded-b-xl relative md:max-w-[32%]">
-                    <Image src={placeholderPic} alt="" className="w-full" />
-                    <div className="py-2">Downtown Dubai</div>
-                    <div className="absolute top-2 left-2 mareacolorbg text-xs text-white px-3 py-1 rounded-xl">From AED 2.9 Mn</div>
-                </div>
             </div>
             <div className="py-10 space-x-2 text-center">
                 <a href="#" className="mareacolor text-2xl font-semibold no-underline">1</a>

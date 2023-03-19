@@ -5,11 +5,29 @@ import Header from '../components/header/header';
 import Footer from '../components/footer';
 import LogosTags from '../components/logosTags';
 import MapProperties from '../components/map/mapProperties';
+import Link from 'next/link';
+import Card from '@/components/card';
+import { loadProperties } from '@/lib/fetchUrl';
+import propertiesMapImage from '../public/properties-on-map.jpg';
+import Image from 'next/image';
+
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Areas() {
+export async function getStaticProps() {
+    const URL = 'http://localhost:3000/properties/get-all'
+    const res = await fetch(URL)
+    const data = await res.json()
+
+    return {
+        props: {
+            properties: data
+        }
+    }
+}
+
+export default function Areas({properties}) {
   return (
     <>
       <Head>
@@ -21,7 +39,29 @@ export default function Areas() {
         <main className={styles.main}>
           <>
             <Header />
-            <MapProperties />
+            <div className="w-full mb-10">
+                <Image src={propertiesMapImage} alt="" className="w-full" />
+            </div>
+            <div className="flex content-wrap w-full mb-10 max-md:flex-wrap">
+              <MapProperties />
+              <div className="basis-full lg:basis-3/4 ml-5">
+                <div className='flex flex-wrap justify-between gap-y-10 mb-10'>
+                {properties.map(property => {
+                    return (
+                      <>
+                          <Link key={property._id} href={`/project/${property._id}`}>
+                              <Card projectName={property.projectName} />
+                          </Link>
+                      </>
+                    )
+                })}
+                </div>
+                <div>
+                  <h3 className='my-10'>Video</h3>
+                  <iframe width="100%" height="330" src="https://www.youtube.com/embed/8D1aWLcyLvM" title="Ready To Move In | Huge Balcony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
             <LogosTags />
           </>
         </main>

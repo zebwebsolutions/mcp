@@ -1,14 +1,9 @@
 import Card from '../card';
 import Image from 'next/image';
-import propertiesMapImage from '../../public/properties-on-map.jpg';
 
 export default function MapProperties() {
     return(
         <>
-            <div className="w-full mb-10">
-                <Image src={propertiesMapImage} alt="" className="w-full" />
-            </div>
-            <div className="flex content-wrap w-full mb-10 max-md:flex-wrap">
                 <div className="basis-full lg:basis-1/4 mr-5">
                     <h3 className='font-medium mb-10'>Filter</h3>
                     <div className='bg-[#f8f8f8] mb-10 py-8 px-5'>
@@ -56,25 +51,6 @@ export default function MapProperties() {
                         </form>
                     </div>
                 </div>
-                <div className="basis-full lg:basis-3/4 ml-5">
-                    <h3 className='font-medium mb-10'>All Properties</h3>
-                    <div className='flex flex-wrap justify-between gap-y-10 mb-10'>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-                    <div>
-                        <h3 className='my-10'>Video</h3>
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/8D1aWLcyLvM" title="Ready To Move In | Huge Balcony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }
