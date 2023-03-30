@@ -59,7 +59,8 @@ export default function Areas({areas}) {
               {areas.map(area => (
                   <Link key={area._id}  href={`/area/${area._id}`} className="bg-[#ededed] text-center rounded-b-xl relative basis-1/3 md:max-w-[32%] mt-10">
                   <AreaCard 
-                      name={area.areaName} 
+                      name={area.areaName}
+                      url={area.coverImage} 
                   />
                   </Link>
               ))}

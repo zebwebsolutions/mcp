@@ -41,26 +41,15 @@ export default function DeveloperHeader(props) {
                         }
                     }}
                 >
-                    <SwiperSlide>
-                    <div className='w-full'>
-                        <Image src={placeholderPic} alt="slider image" className='w-full' />
-                    </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <div className='w-full'>
-                        <Image src={placeholderPic} alt="slider image" className='w-full' />
-                    </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <div className='w-full'>
-                        <Image src={placeholderPic} alt="slider image" className='w-full' />
-                    </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <div className='w-full'>
-                        <Image src={placeholderPic} alt="slider image" className='w-full' />
-                    </div>
-                    </SwiperSlide>
+                    {
+                        props.urls && props.urls.map(url => (
+                        <SwiperSlide key={url}>
+                        <div className='w-full h-96'>
+                            <img src={url} alt="slider image" className='w-full' />
+                        </div>
+                        </SwiperSlide>
+                        ))
+                    }
                 </Swiper>
             </div>
         </>

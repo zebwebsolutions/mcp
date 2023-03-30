@@ -1,4 +1,5 @@
 import herostyles from '../styles/HeroSection.module.css';
+import SearchBar from './searchBar';
 
 
 export default function HeroSection() {
@@ -15,6 +16,9 @@ export default function HeroSection() {
                         <p className='font-light text-lg w-5/12'>
                             We pride ourselves on our transparency, fairness and integrity to gain the trust of our stakeholders.
                         </p>
+                    </div>
+                    <div>
+                        <SearchBar />
                     </div>
                 </div>
         </section>

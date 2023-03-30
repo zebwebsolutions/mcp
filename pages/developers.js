@@ -57,9 +57,10 @@ export default function Areas({developers}) {
             
             <div className="flex flex-wrap justify-between space-y-10">
             {developers.map(developer => (
-                <Link key={developer._id}  href={`/developer/${developer._id}`} className="bg-[#ededed] text-center rounded-b-xl relative basis-1/3 md:max-w-[32%] mt-10">
+                <Link key={developer._id}  href={`/developer/${developer._id}`} className="no-underline bg-[#ededed] text-black text-center rounded-b-xl relative basis-1/3 md:max-w-[32%] mt-10">
                 <DeveloperCard 
-                    name={developer.developerName} 
+                    name={developer.developerName}
+                    url={developer.coverImage} 
                 />
                 </Link>
             ))}

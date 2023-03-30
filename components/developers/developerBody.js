@@ -9,6 +9,7 @@ import stepsIcon from '../../public/icons/steps-icon.png';
 import vicinityIcon from '../../public/icons/vicinity-icon.svg';
 import sanctuaryIcon from '../../public/icons/sanctuary-icon.png';
 import PropertiesByDevelopers from "./PropsByDevs";
+import YouTubeEmbed from "../youtubeEmbed";
 
 export default function DeveloperBody(props) {
     return(
@@ -42,7 +43,7 @@ export default function DeveloperBody(props) {
                     </div>
                     <div className="px-4 box-border">
                         <h3 className='mt-10'>Video</h3>
-                        <iframe width="100%" height="330px" src="https://www.youtube.com/embed/8D1aWLcyLvM" title="Ready To Move In | Huge Balcony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <YouTubeEmbed embed={props.embed} />
                     </div>
                 </div>
             </div>

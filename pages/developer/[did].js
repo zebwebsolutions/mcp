@@ -8,6 +8,8 @@ import DeveloperHeader from '@/components/developers/developerHeader'
 import ListingBody from '../../components/singlelisting/listingBody'
 import Features from '@/components/singlelisting/features'
 import DeveloperBody from '@/components/developers/developerBody'
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 
 
 export async function getStaticPaths() {
@@ -41,7 +43,16 @@ export async function getStaticProps({params}) {
     }
 }
 
+
 const DeveloperPage = ({developer}) => {
+    const [featuredProperty, setFeaturedProperty] = useState([])
+    useEffect(() => {
+        async function fetchProperties() {
+            const res = await axios.get('http://localhost:3000/properties/by-developer/' + developer._id)
+            .then(response => setFeaturedProperty(response.data))
+        }
+        fetchProperties()
+    }, [])
 
 
     return (
@@ -56,8 +67,10 @@ const DeveloperPage = ({developer}) => {
                 <Header />
                 <DeveloperHeader 
                     name={developer.developerName}
+                    price={featuredProperty[0] && featuredProperty[0].price}
+                    urls={featuredProperty[0] && featuredProperty[0].galleryImgs}
                 />
-                <DeveloperBody developer={developer} />
+                <DeveloperBody developer={developer} embed={featuredProperty[0] && featuredProperty[0].videoEmbed} />
 
 
             </main>
